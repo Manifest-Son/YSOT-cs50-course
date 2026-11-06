@@ -1,0 +1,11 @@
+# Pinned for reproducibility. Python 3.10+ required.
+# Tested on Python 3.14; versions below also support 3.10+.
+openai==1.51.0
+# openai 1.51.0 passes `proxies=` to httpx, which httpx 0.28+ removed.
+httpx==0.27.2
+python-dotenv==1.0.1
+scikit-learn==1.5.2
+matplotlib==3.9.2
+numpy==1.26.4
+scipy==1.13.1
+pytest==8.3.3
