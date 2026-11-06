@@ -9,7 +9,7 @@ modules can grow, be set up, and be tested independently.
 | Module | Topic | Stack | Status |
 | --- | --- | --- | --- |
 | [`ai-for-beginners/`](ai-for-beginners/) | Introduction to Artificial Intelligence: a 6-session, hands-on course with a "Game Night" tic-tac-toe capstone | Python 3.10+ | In progress |
-| [`python-daily-practice/`](python-daily-practice/) | A small Python exercise every day: one `Day N` folder each, with a README that explains how to do the task, starter code and tests | Python 3.10+ | In progress |
+| [`python-daily-practice/`](python-daily-practice/) | A Python assignment every day, set at **Mavuno School** (a school management system). Level 1 (beginner) has 35 days; each `Day N` folder has a README that explains the task, starter code to continue, and a notes file | Python 3.10+ | Level 1 ready |
 
 > More modules will be added here as new concepts are introduced.
 
@@ -33,8 +33,9 @@ branch**, push it, and your instructor reviews it and gives you feedback.
    ```bash
    git switch -c lennox
    ```
-4. **Set up the module** you are working in by following its README, for example
-   [`python-daily-practice/README.md`](python-daily-practice/README.md).
+4. **Read the module's README** for what you need to work in it, for example
+   [`python-daily-practice/README.md`](python-daily-practice/README.md) (you only
+   need Python 3.10 or newer).
 
 ### Every day
 
@@ -49,10 +50,10 @@ branch**, push it, and your instructor reviews it and gives you feedback.
    `git pull` can stop with `Need to specify how to reconcile divergent branches`
    once you have your own commits.
 2. **Read the instructions.** Open the day's folder inside the module, for example
-   `python-daily-practice/Day 3/`, and read its `README.md` from top to bottom.
-   It explains the task and exactly how to do it.
-3. **Do the task** in the files in that day's folder, following the README's
-   **How to do it** and **Run and test** sections.
+   `python-daily-practice/level-1-beginner/Day 3/`, and read its `README.md` from
+   top to bottom. It explains the assignment and exactly how to do it.
+3. **Do the task** in the starter file in that day's folder (for example
+   `day_03.py`), following the README's **How to do it** and **Run it** sections.
 4. **Save your work and push it** to your branch:
    ```bash
    git status                         # check you only changed what you meant to

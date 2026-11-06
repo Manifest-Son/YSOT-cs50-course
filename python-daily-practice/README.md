@@ -1,79 +1,66 @@
 # Python Daily Practice
 
-A small Python exercise every day. Each day lives in its own folder (`Day 1`, `Day 2`, ...) with the same set of starter files, so you always know where to look and what to do.
+A small Python assignment every day, all set at **Mavuno School** (a school that needs a system to manage its students, teachers, parents, exams and reports; see [DOMAIN.md](DOMAIN.md)). Each day is its own folder (`Day 1`, `Day 2`, ...) with the same set of files, so you always know where to look and what to do.
 
-## The days
+## Levels
 
-| Day | Topic | Status |
+| Level | Days | Status |
 | --- | --- | --- |
-| [Day 1](Day%201/) | Functions and strings | Ready |
+| [Level 1: Beginner](level-1-beginner/) | 35 | Ready. Ends with a Mini School Management System |
+| [Level 2: Intermediate](level-2-intermediate/) | to be planned | Planned |
+
+Each level has a `README.md` with the full list of days.
 
 ## What is in every day folder
 
 ```
 Day N/
-├── README.md        <- REQUIRED. Explains the task and exactly how to do it
-├── day_NN.py        <- starter code with TODO stubs: you write your solution here
-├── test_day_NN.py   <- tests that tell you when you are done
-└── NOTES.md         <- your short reflection after finishing
+├── README.md     <- REQUIRED. The assignment and exactly how to do it
+├── day_NN.py     <- starter code: you continue it and write your solution here
+└── NOTES.md      <- your short reflection after finishing
 ```
 
-`NN` is the day number padded to two digits (`day_01.py`, `day_12.py`), so each day's files have a unique name and all days can be tested together.
+`NN` is the day number padded to two digits (`day_01.py`, `day_12.py`). The day `README.md` always has these sections: **Goal**, **Concepts**, **Scenario**, **Task**, **Examples**, **How to do it**, **Run it**, **Done when**, **Stretch goals**.
 
-The day `README.md` always has these sections: **Goal**, **Concepts**, **Task**, **Examples**, **How to do it**, **Run and test**, **Done when**, **Stretch goals**. `tests/test_structure.py` fails if a day has no README or if Goal, Task, How to do it, Run and test or Done when is missing or empty.
+The starter code gives you the scaffolding (comments, given data, function names). **You write the solution.** Your instructor reviews your work and gives feedback.
 
-## One-time setup
+## What you need
 
-You need Python 3.10 or newer. From this folder (`python-daily-practice/`):
-
-```bash
-python -m venv .venv
-# Windows:      .venv\Scripts\activate
-# macOS/Linux:  source .venv/bin/activate
-pip install -r requirements.txt
-```
+Python 3.10 or newer, and a text editor. Nothing else to install. Day 1 shows you how to check your Python and run a file.
 
 ## Your daily routine
 
-1. Open the day's `README.md` and read it all the way through.
-2. Work in `day_NN.py`. Follow the steps in the README's **How to do it** section.
-3. Check your work as you go:
+1. Pull the new day (see "For students" in the [main README](../README.md)).
+2. Open the day's `README.md` and read it all the way through.
+3. Work in `day_NN.py`, following the steps in **How to do it**. Run it as often as you like:
    ```bash
-   python -m pytest "Day 1" -q        # replace 1 with today's number
+   python "level-1-beginner/Day 1/day_01.py"      # replace with today's level and day
    ```
-4. Run your program:
-   ```bash
-   python "Day 1/day_01.py"
-   ```
-5. When all the tests pass, write a few lines in `NOTES.md`.
+4. Write a few lines in `NOTES.md`.
+5. Commit and push to **your own branch** so your instructor can review it.
 
-Folder names contain a space, so keep the quotes around them in commands.
+Folder names contain a space, so keep the quotes around them in commands. Run commands from this folder (`python-daily-practice/`).
 
-## Adding a new day
+## For instructors: adding a new day
 
 ```bash
-python new_day.py --title "Loops and lists"     # creates the next Day N
-python new_day.py 7 --title "Dictionaries"      # or a specific number
+python new_day.py --title "Loops and lists"                  # next Day N in the newest level
+python new_day.py 7 --level 2 --title "Reading files"        # a specific day in level 2
+python new_day.py --style functions --title "Fee functions"  # starter made of function stubs
 ```
 
 This copies the files in `_template/` into a new `Day N` folder. Then:
 
-1. Replace every `TODO(author)` in the new folder: write the README, the starter code and the tests. `tests/test_structure.py` will not pass until you do.
-2. Add the day to the table at the top of this file.
-3. Check the structure: `python -m pytest tests -q`
+1. Replace every `TODO(author)`: write the README and the starter code.
+2. Add the day to the table in the level's `README.md`.
+3. Run `python check_days.py`. It must say `OK`.
+
+`check_days.py` (standard library only) enforces the rules: every day has a `README.md` with the required sections, a starter file that is valid Python, and a `NOTES.md`; day numbers have no gaps; the level README lists every day; and no `TODO(author)` is left behind.
 
 Rules for a good day:
 
-- It can be done in 30-45 minutes.
+- It can be done in 30-60 minutes.
 - The README explains what to build **and** how to approach it (hints, not the solution).
-- Tests cover the normal cases and the edge cases, and each test failure message tells the learner what went wrong.
-
-## Useful commands
-
-```bash
-python -m pytest tests -q          # check every day has a complete README and starter files
-python -m pytest "Day 1" -q        # test a single day
-python -m pytest -q                # everything (days you have not solved yet will fail: that is expected)
-```
-
-Solutions are not stored in this repo. Keep your own solution in `day_NN.py` and commit it when you are done.
+- The starter gives scaffolding and never the solution. Solutions are not stored in this repository.
+- Everything is set at Mavuno School and follows the house rules in [DOMAIN.md](DOMAIN.md).
+- The plan is organised by **day only**.
